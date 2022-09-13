@@ -3,8 +3,8 @@ import json
 from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 
-from src.auth.auth import requires_auth, AuthError
-from src.database.models import Drink, setup_db, db_drop_and_create_all
+from backend.src.auth.auth import requires_auth, AuthError
+from backend.src.database.models import db_drop_and_create_all, setup_db, Drink
 
 app = Flask(__name__)
 setup_db(app)
